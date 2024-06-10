@@ -51,15 +51,15 @@ The Python application is packaged as a Docker image and stored in both DockerHu
 The Docker image is deployed to an Amazon Elastic Kubernetes Service (EKS) cluster, which provides a managed Kubernetes environment.
 
 ## **Terraform:** 
-The entire infrastructure, including the EKS cluster, ECR repository, and other AWS resources, is provisioned and managed using Terraform. The Terraform state is stored in Terraform Cloud.
-
-<img width="1255" alt="VPC" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/82bd3055-750b-407f-b265-ae56db849e84">
+The entire infrastructure, including the EKS cluster, ECR repository, and other AWS resources, is provisioned and managed using Terraform. 
 
 <img width="1244" alt="ECR" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/2a752e9c-6615-45ec-b8e4-1eb2360fd9fa">
 
 <img width="1321" alt="EKS" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/2641bb11-38c6-41c8-b3b6-370e92f8eb7a">
 
+## The Terraform state is stored in Terraform Cloud.
 
+<img width="1218" alt="Screenshot 2024-06-10 at 23 44 49" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/45aee0fb-841c-45ea-90a6-39428b202329">
 
 
 ``` docker push your-dockerhub-username/my-monitoring-app ``` 
@@ -78,6 +78,9 @@ Tag the Docker image with the ECR repository URI:
 ``` docker tag my-monitoring-app <your-ecr-repository-uri>/my-monitoring-app ``` 
 
 Push the Docker image to ECR:
+
+<img width="1359" alt="Screenshot 2024-06-10 at 23 46 47" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/181008a4-f9e2-4885-ae41-2be3ee7ea00e">
+
 
 Copy
 ``` docker push <your-ecr-repository-uri>/my-monitoring-app``` 

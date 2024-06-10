@@ -28,13 +28,19 @@ The Cloud-Native Monitoring Application is a Python-based tool that provides rea
 The application architecture consists of the following components:
 
 ## **Docker** Image:
-Build the Docker image using the following command:
+### Build the Docker image using the following command:
 
 ``` docker build -t flask-app .```
 
-Running the image
+### Running the image in the terminal:
 
 ``` docker run -p 5000:5000 flask-app ``` 
+<img width="1165" alt="Screenshot 2024-06-10 at 23 23 07" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/70ab7c76-8cff-4b82-aef3-c11201243aba">
+
+### Flask Apoplication image in the UI:
+
+<img width="1710" alt="Screenshot 2024-06-10 at 23 23 19" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/899bd537-e7c2-4705-9947-31badf0481c9">
+
 
 
 The Python application is packaged as a Docker image and stored in both DockerHub and Amazon Elastic Container Registry (ECR).
@@ -55,33 +61,13 @@ The entire infrastructure, including the EKS cluster, ECR repository, and other 
 
 
 
-## Prerequisites
-
-* The dependencies (requirments.txt file) have to be installed. 
-
-AWS CLI configured with your AWS credentials
-
-Getting Started
-Building the Docker Image
-
-Build the Docker image using the following command:
-
-
-Log in to your DockerHub account:
-
-
-
-Insert at cursor
-
-Copy
-``` docker tag my-monitoring-app your-dockerhub-username/my-monitoring-app ``` 
-Push the Docker image to DockerHub:
-
 
 ``` docker push your-dockerhub-username/my-monitoring-app ``` 
 ## **Pushing the Docker Image to AWS ECR**
 
-Create an ECR repository in the AWS Management Console or using the AWS CLI.
+Create an ECR repository in the AWS Management Console with Terraform.
+<img width="1323" alt="Screenshot 2024-06-10 at 23 28 14" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/d83c999b-7eb5-472e-8bdb-183e0c164a05">
+
 
 Log in to the ECR repository:
 

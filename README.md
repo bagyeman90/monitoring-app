@@ -39,9 +39,9 @@ The Docker image is deployed to an Amazon Elastic Kubernetes Service (EKS) clust
 ## **Terraform:** 
 The entire infrastructure, including the EKS cluster, ECR repository, and other AWS resources, is provisioned and managed using Terraform. The Terraform state is stored in Terraform Cloud.
 
-Prerequisites
+## Prerequisites
 
-. The dependencies (requirments.txt file) have to be installed. 
+* The dependencies (requirments.txt file) have to be installed. 
 
 AWS account with the necessary permissions to create and manage resources
 

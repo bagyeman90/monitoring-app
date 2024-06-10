@@ -7,7 +7,7 @@
 Architecture
 
 
-Getting Started
+## **Getting Started**
 
 Building the Docker Image
 
@@ -25,14 +25,14 @@ Monitoring and Observability
 Introduction
 The Cloud-Native Monitoring Application is a Python-based tool that provides real-time monitoring and observability for cloud-based infrastructure and applications. It leverages various AWS services, including Amazon EKS, Amazon ECR, and Terraform Cloud, to deliver a scalable and reliable monitoring solution.
 
-Architecture
+# Architecture
 The application architecture consists of the following components:
 
-Docker Image: The Python application is packaged as a Docker image and stored in both DockerHub and Amazon Elastic Container Registry (ECR).
+## **Docker Image: The Python application is packaged as a Docker image and stored in both DockerHub and Amazon Elastic Container Registry (ECR).**
 
-AWS EKS: The Docker image is deployed to an Amazon Elastic Kubernetes Service (EKS) cluster, which provides a managed Kubernetes environment.
+## **AWS EKS: The Docker image is deployed to an Amazon Elastic Kubernetes Service (EKS) cluster, which provides a managed Kubernetes environment.**
 
-Terraform: The entire infrastructure, including the EKS cluster, ECR repository, and other AWS resources, is provisioned and managed using Terraform. The Terraform state is stored in Terraform Cloud.
+## **Terraform: The entire infrastructure, including the EKS cluster, ECR repository, and other AWS resources, is provisioned and managed using Terraform. The Terraform state is stored in Terraform Cloud.**
 
 Prerequisites
 

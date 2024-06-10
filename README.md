@@ -92,40 +92,34 @@ Tag the Docker image with the ECR repository URI:
 Push the Docker image to ECR:
 
 Copy
-docker push <your-ecr-repository-uri>/my-monitoring-app
-Deploying to AWS EKS
-Navigate to the Terraform directory in your project.
+``` docker push <your-ecr-repository-uri>/my-monitoring-app``` 
+
+## **Deploying to AWS EKS**
+### **Navigate to the Terraform directory in your project.**
 
 Initialize the Terraform working directory:
 
-
-Insert at cursor
-
-Copy
-terraform init
+COPY ``` terraform init``` 
 Review the Terraform configuration and make any necessary changes.
 
 Apply the Terraform configuration to create the EKS cluster and deploy the application:
 
-
-Insert at cursor
-
 Copy
-terraform apply
+``` terraform apply``` 
 Terraform Configuration
 The Terraform configuration for this project is stored in the 
 terraform
  directory. It includes the following resources:
 
-AWS provider configuration
+## **AWS provider configuration**
 
-EKS cluster
+## **EKS cluster**
 
-ECR repository
+## **ECR repository**
 
-Kubernetes resources (deployment, service, etc.)
+## **Kubernetes resources (deployment, service, etc.)**
 
-Terraform Cloud backend configuration
+## **Terraform Cloud backend configuration**
 
 You can customize the Terraform configuration to fit your specific requirements, such as adjusting the instance types, scaling options, and other parameters.
 

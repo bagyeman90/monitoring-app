@@ -41,7 +41,7 @@ The entire infrastructure, including the EKS cluster, ECR repository, and other 
 
 Prerequisites
 
-The dependencies (requirments.txt file) have to be installed. 
+. The dependencies (requirments.txt file) have to be installed. 
 
 AWS account with the necessary permissions to create and manage resources
 

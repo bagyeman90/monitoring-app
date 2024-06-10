@@ -3,6 +3,8 @@
 
 
 ## Architecture
+<img width="506" alt="Screenshot 2024-06-10 at 23 00 20" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/855e21dc-d712-4a98-b748-e3f0bd7b972d">
+
 
 ## Getting Started**
 

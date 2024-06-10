@@ -59,16 +59,12 @@ Build the Docker image using the following command:
 Insert at cursor
 
 Copy
-docker build -t flask-app .
+''' docker build -t flask-app .'''
 Pushing the Docker Image to DockerHub
+''' docker push flask-app '''
 Log in to your DockerHub account:
-
-
-Insert at cursor
-
-Copy
-docker login
-Tag the Docker image with your DockerHub username and repository name:
+Running the image
+'''docker run -p 5000:5000 flask-app '''
 
 
 Insert at cursor

@@ -11,43 +11,42 @@ The Cloud-Native Monitoring Application is a Python-based tool that provides rea
 
 ## Getting Started**
 
-Building the Docker Image
+* Building the Docker Image
 
-Pushing the Docker Image to DockerHub
+* Pushing the Docker Image to DockerHub
 
-Pushing the Docker Image to AWS ECR [2]
+* Pushing the Docker Image to AWS ECR [2]
 
-Deploying to AWS EKS
+* Deploying to AWS EKS
 
-Terraform Configuration [3]
+* Terraform Configuration [3]
 
-Monitoring and Observability
+* Monitoring and Observability
 
-
-Introduction
-The Cloud-Native Monitoring Application is a Python-based tool that provides real-time monitoring and observability for cloud-based infrastructure and applications. It leverages various AWS services, including Amazon EKS, Amazon ECR, and Terraform Cloud, to deliver a scalable and reliable monitoring solution.
 
 # Architecture
 The application architecture consists of the following components:
 
 ## **Docker** Image:
 The Python application is packaged as a Docker image and stored in both DockerHub and Amazon Elastic Container Registry (ECR).
+<img width="785" alt="Screenshot 2024-06-10 at 23 14 46" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/a5c1e07b-7dca-44f3-8de2-79ec78185f7a">
 
 ## **AWS EKS:** 
 The Docker image is deployed to an Amazon Elastic Kubernetes Service (EKS) cluster, which provides a managed Kubernetes environment.
 
 ## **Terraform:** 
 The entire infrastructure, including the EKS cluster, ECR repository, and other AWS resources, is provisioned and managed using Terraform. The Terraform state is stored in Terraform Cloud.
+<img width="1255" alt="VPC" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/82bd3055-750b-407f-b265-ae56db849e84">
+<img width="1244" alt="ECR" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/2a752e9c-6615-45ec-b8e4-1eb2360fd9fa">
+<img width="1321" alt="EKS" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/2641bb11-38c6-41c8-b3b6-370e92f8eb7a">
+
+
 
 ## Prerequisites
 
 * The dependencies (requirments.txt file) have to be installed. 
 
-AWS account with the necessary permissions to create and manage resources
 
-Terraform installed on your local machine
-
-Docker installed on your local machine
 
 AWS CLI configured with your AWS credentials
 
@@ -58,7 +57,6 @@ Navigate to the project directory.
 Build the Docker image using the following command:
 
 
-Insert at cursor
 
 Copy
 ``` docker build -t flask-app .```

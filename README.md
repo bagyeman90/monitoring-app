@@ -41,7 +41,29 @@ The application architecture consists of the following components:
 
 <img width="1710" alt="Screenshot 2024-06-10 at 23 23 19" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/899bd537-e7c2-4705-9947-31badf0481c9">
 
+Initialize the Terraform working directory:
 
+COPY ``` terraform init``` 
+Review the Terraform configuration and make any necessary changes.
+
+Apply the Terraform configuration to create the EKS cluster and deploy the application:
+
+Copy
+``` terraform apply``` 
+Terraform Configuration
+The Terraform configuration for this project is stored in the 
+terraform
+ directory. It includes the following resources:
+
+## **AWS provider configuration**
+
+## **EKS cluster**
+
+## **ECR repository**
+
+## **Kubernetes resources (deployment, service, etc.)**
+
+## **Terraform Cloud backend configuration**
 
 The Python application is packaged as a Docker image and stored in both DockerHub and Amazon Elastic Container Registry (ECR).
 
@@ -88,29 +110,7 @@ Copy
 ## **Deploying to AWS EKS**
 ### **Navigate to the Terraform directory in your project.**
 
-Initialize the Terraform working directory:
 
-COPY ``` terraform init``` 
-Review the Terraform configuration and make any necessary changes.
-
-Apply the Terraform configuration to create the EKS cluster and deploy the application:
-
-Copy
-``` terraform apply``` 
-Terraform Configuration
-The Terraform configuration for this project is stored in the 
-terraform
- directory. It includes the following resources:
-
-## **AWS provider configuration**
-
-## **EKS cluster**
-
-## **ECR repository**
-
-## **Kubernetes resources (deployment, service, etc.)**
-
-## **Terraform Cloud backend configuration**
 
 You can customize the Terraform configuration to fit your specific requirements, such as adjusting the instance types, scaling options, and other parameters.
 

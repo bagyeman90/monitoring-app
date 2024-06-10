@@ -34,8 +34,13 @@ jobs:
         python -m pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         
-    - name: Push the build
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+        
+    
     - uses: actions/checkout@v2
+    - name: Push the build
     - uses: docker://ghcr.io/kciter/aws-ecr-action:latest
       with:
         access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}

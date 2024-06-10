@@ -1,6 +1,9 @@
 # ** Cloud-Native Monitoring Application **
 ## **This project is a cloud-native monitoring application built using Python. The application is containerized using Docker and deployed to AWS Elastic Kubernetes Service (EKS) using Terraform.** [1]
 
+### Introduction
+The Cloud-Native Monitoring Application is a Python-based tool that provides real-time monitoring and observability for cloud-based infrastructure and applications. It leverages various AWS services, including Amazon EKS, Amazon ECR, and Terraform Cloud, to deliver a scalable and reliable monitoring solution.
+
 
 ## Architecture
 <img width="506" alt="Screenshot 2024-06-10 at 23 00 20" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/855e21dc-d712-4a98-b748-e3f0bd7b972d">

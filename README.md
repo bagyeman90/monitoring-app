@@ -72,35 +72,24 @@ Running the image
 Insert at cursor
 
 Copy
-docker tag my-monitoring-app your-dockerhub-username/my-monitoring-app
+``` docker tag my-monitoring-app your-dockerhub-username/my-monitoring-app ``` 
 Push the Docker image to DockerHub:
 
 
-Insert at cursor
+``` docker push your-dockerhub-username/my-monitoring-app ``` 
+## **Pushing the Docker Image to AWS ECR**
 
-Copy
-docker push your-dockerhub-username/my-monitoring-app
-Pushing the Docker Image to AWS ECR
 Create an ECR repository in the AWS Management Console or using the AWS CLI.
 
 Log in to the ECR repository:
 
+``` aws ecr get-login-password --region <your-aws-region> | docker login --username AWS --password-stdin <your-ecr-repository-uri>``` 
 
-Insert at cursor
-
-Copy
-aws ecr get-login-password --region <your-aws-region> | docker login --username AWS --password-stdin <your-ecr-repository-uri>
 Tag the Docker image with the ECR repository URI:
 
+``` docker tag my-monitoring-app <your-ecr-repository-uri>/my-monitoring-app ``` 
 
-Insert at cursor
-
-Copy
-docker tag my-monitoring-app <your-ecr-repository-uri>/my-monitoring-app
 Push the Docker image to ECR:
-
-
-Insert at cursor
 
 Copy
 docker push <your-ecr-repository-uri>/my-monitoring-app

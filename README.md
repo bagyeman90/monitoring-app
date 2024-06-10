@@ -3,11 +3,8 @@
 
 
 ## Architecture
-![image](https://github.com/bagyeman90/monitoring-app/assets/131815160/f6c975c8-b42c-475a-8887-9163ae1b4d5e)
 
-
-
-## **Getting Started**
+## Getting Started**
 
 Building the Docker Image
 

@@ -108,6 +108,57 @@ Copy
 ``` docker push <your-ecr-repository-uri>/my-monitoring-app``` 
 
 ## **Deploying to AWS EKS**
+```jsx
+name: Deploy to Amazon ECR
+
+on:
+  push:
+    branches: [ "main" ]
+
+env:
+  AWS_REGION: eu-west-1              
+  ECR_REPOSITORY: flask-ecr-repo         
+                                              
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
+
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+
+    - name: Build, tag, and push image to Amazon ECR
+      id: build-image
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        IMAGE_TAG: ${{ github.sha }}
+      run: |
+        # Build a docker container and
+        # push it to ECR so that it can
+        # be deployed to ECS.
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
+```
+
+
 ### **Navigate to the Terraform directory in your project.**
 
 
@@ -115,13 +166,10 @@ Copy
 You can customize the Terraform configuration to fit your specific requirements, such as adjusting the instance types, scaling options, and other parameters.
 
 Monitoring and Observability
-The Cloud-Native Monitoring Application leverages AWS services for monitoring and observability, including:
+The Cloud-Native Monitoring Application leverages AWS services for monitoring and observability.
 
-Amazon CloudWatch for logging and metrics
 
-AWS X-Ray for distributed tracing
 
-AWS CloudTrail for auditing and security monitoring
 
 You can configure these services in the Terraform configuration or through the AWS Management Console.
 

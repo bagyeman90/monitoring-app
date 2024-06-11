@@ -160,6 +160,9 @@ jobs:
 
 ## **CI/CD Pipeline**
 
+<img width="1684" alt="Screenshot 2024-06-11 at 01 08 31" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/f42b6fb2-a5e7-4974-bb1d-5c9654abe910">
+
+
 
 ### **Navigate to the Terraform directory in your project.**
 

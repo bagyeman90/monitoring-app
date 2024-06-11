@@ -6,7 +6,7 @@ The Cloud-Native Monitoring Application is a Python-based tool that provides rea
 
 
 ## Main Architecture
-<img width="506" alt="Screenshot 2024-06-10 at 23 00 20" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/855e21dc-d712-4a98-b748-e3f0bd7b972d">
+<img width="706" alt="Screenshot 2024-06-11 at 14 50 58" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/77f165f4-0df1-41e0-a961-3dbc9127b849">
 
 
 ## Getting Started**

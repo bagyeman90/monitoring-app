@@ -159,24 +159,39 @@ jobs:
 ```
 
 ## **CI/CD Pipeline**
+### GitHub Actions for the pipeline
 
 <img width="1684" alt="Screenshot 2024-06-11 at 01 08 31" src="https://github.com/bagyeman90/monitoring-app/assets/131815160/f42b6fb2-a5e7-4974-bb1d-5c9654abe910">
 
 
+# Project Summary
+## Task:
+Developed a cloud-native monitoring application using Python, containerize it with Docker, and deploy it on AWS Elastic Kubernetes Service (EKS) using Terraform. The application should leverage AWS services for a scalable and reliable monitoring solution.
 
-### **Navigate to the Terraform directory in your project.**
+## Evaluation:
+The project successfully delivers a robust cloud-native monitoring solution that integrates various AWS services. The application architecture ensures scalability, reliability, and maintainability through the use of Docker for containerization, Kubernetes for orchestration, and Terraform for infrastructure as code.
 
+## Cloud Infrastructure Setup:
+The infrastructure is set up using Terraform, which provisions and manages the necessary AWS resources, including:
 
+* Amazon EKS: A managed Kubernetes service for deploying the application.
+* Amazon ECR: A container registry for storing Docker images.
+* Terraform Cloud: Used for storing the Terraform state and ensuring consistent infrastructure management.
 
-You can customize the Terraform configuration to fit your specific requirements, such as adjusting the instance types, scaling options, and other parameters.
+## Continuous Integration & Continuous Deployment (CI/CD) Pipeline:
+A CI/CD pipeline is implemented using GitHub Actions, automating the process of building, tagging, and pushing Docker images to Amazon ECR. The pipeline ensures that every change to the codebase is tested and deployed efficiently, maintaining high deployment velocity and reliability. Key steps in the pipeline include:
 
-Monitoring and Observability
-The Cloud-Native Monitoring Application leverages AWS services for monitoring and observability.
+* Checking out the code from the repository.
+* Configuring AWS credentials.
+* Logging into Amazon ECR.
+* Building, tagging, and pushing the Docker image to ECR.
 
+## Containerization and Container Orchestration:
+### Containerization: 
+The Python application is packaged as a Docker image, ensuring consistency across different environments. 
 
+### Container Orchestration: 
+The Docker image is deployed on an Amazon EKS cluster. Kubernetes resources, including deployments and services, are managed through Terraform configuration files, providing a scalable and resilient environment for the application.
 
-
-You can configure these services in the Terraform configuration or through the AWS Management Console.
-
-Contributing
-Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please create a new issue or submit a pull request.
+## Results:
+The project demonstrates a fully functional cloud-native monitoring application, highlighting the benefits of using Docker for containerization and Kubernetes for orchestration. The use of Terraform for infrastructure as code ensures a reproducible and manageable setup. The CI/CD pipeline automates the deployment process, enhancing efficiency and reliability. The application architecture provides a scalable solution capable of monitoring cloud-based infrastructure in real-time, leveraging the robustness and scalability of AWS services.

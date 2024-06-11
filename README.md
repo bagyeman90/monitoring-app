@@ -158,6 +158,8 @@ jobs:
         echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
 ```
 
+## **CI/CD Pipeline**
+
 
 ### **Navigate to the Terraform directory in your project.**
 
